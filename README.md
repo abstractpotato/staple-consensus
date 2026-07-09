@@ -1,1 +1,1 @@
-# staple-consensus
+# Staple Consensus
