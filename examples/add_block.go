@@ -33,8 +33,8 @@ func main() {
   ledger := Ledger.NewLedger()
   ledger.Genesis = block.Body.Genesis
   ledger.InitTime = block.Body.Timestamp
-  // ledger.Params = *block.Body.Genesis.Params
-  // ledger.AddCertificate(block.Body.Genesis.Certificate)
+  ledger.Params = &block.Body.Genesis.Params
+  ledger.AddCertificate(block.Body.Genesis.Certificate)
 
   ledgerJSON, err := ledger.ToJSON()
   if err != nil { panic(err) }
