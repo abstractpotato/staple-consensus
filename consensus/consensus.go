@@ -19,6 +19,7 @@ func NewConsensus() Consensus {
 
 func (consensus *Consensus) AddBlock(block PSL.Block) {
   // check if disk has block
+    // check if block is genesis
   // if not check if block is valid
     // calc the epoch
     // verify the leader has signed
@@ -35,3 +36,5 @@ func (consensus *Consensus) UpdateWitnesses(blockID uint, witness PSL.Witness) {
 // func (consensus *Consensus) ValidateTx(tx PSL.Transaction) bool {}
 
 // func (consensus *Consensus) DetermineLeader(id uint) {}
+
+// func (consensus *Consensus) ProcessTransactions() {}
